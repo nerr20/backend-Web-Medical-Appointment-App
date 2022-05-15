@@ -4,4 +4,10 @@ from django.contrib import admin
 
 from .models import Announcement
 
-admin.site.register(Announcement)
+
+class AnnouncementAdmin(admin.ModelAdmin):
+    list_display = ['title', 'author', 'created_time', 'modified_time']
+    fields = ['title', 'author', 'body', 'category']
+
+
+admin.site.register(Announcement, AnnouncementAdmin)
