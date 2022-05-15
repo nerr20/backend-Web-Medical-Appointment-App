@@ -28,4 +28,4 @@ class Announcement(models.Model):
     def save(self, *args, **kwargs):
         self.modified_time = timezone.now()
         super().save(*args, **kwargs)
-        super().save(*args, **kwargs)
+
